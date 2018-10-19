@@ -32,6 +32,7 @@ class Module(ModuleBase):
         self.entries = []
 
         self.clipboard_watcher = Thread(target=self._watch_clipboard)
+        self.clipboard_watcher.daemon = True
         self.clipboard_watcher.start()
 
     def _watch_clipboard(self):
