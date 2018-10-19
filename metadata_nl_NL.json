@@ -1,0 +1,16 @@
+{
+  "description": "Stelt Pext in staat het klembord te beheren",
+  "developer": "Sylvia van Os",
+  "git_urls": [
+    "https://github.com/Pext/pext_module_clipboard"
+  ],
+  "homepage": "https://pext.io/",
+  "id": "pext.module.clipboard",
+  "license": "GPL-3.0+",
+  "name": "Klembord",
+  "platforms": [
+    "Linux",
+    "Darwin",
+    "Windows"
+  ]
+}
