@@ -44,6 +44,10 @@ class Module(ModuleBase):
             except Exception as e:
                 continue
 
+            # Don't save only whitespace
+            if content.isspace():
+                continue
+
             if self.entries and content == self.entries[0]:
                 continue
 
