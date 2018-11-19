@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-10-19 20:17+CEST\n"
-"PO-Revision-Date: 2018-10-19 20:16+0200\n"
+"POT-Creation-Date: 2018-11-19 19:56+CET\n"
+"PO-Revision-Date: 2018-11-19 19:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 "X-Generator: Poedit 2.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:73 __init__.py:85 __init__.py:111
+msgid "Edit"
+msgstr "Bewerk"
+
+#: __init__.py:73 __init__.py:90 __init__.py:111
+msgid "Remove"
+msgstr "Verwijder"
+
+#: __init__.py:87
+msgid "Change clipboard entry to"
+msgstr "Verander klemborditem naar"
 
 #: generate_metadata.py:40
 msgid "Clipboard"

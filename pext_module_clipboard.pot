@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-10-19 20:17+CEST\n"
+"POT-Creation-Date: 2018-11-19 19:56+CET\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,18 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 "Generated-By: pygettext.py 1.5\n"
 
+
+#: __init__.py:73 __init__.py:85 __init__.py:111
+msgid "Edit"
+msgstr ""
+
+#: __init__.py:73 __init__.py:90 __init__.py:111
+msgid "Remove"
+msgstr ""
+
+#: __init__.py:87
+msgid "Change clipboard entry to"
+msgstr ""
 
 #: generate_metadata.py:40
 msgid "Clipboard"
