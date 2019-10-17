@@ -43,5 +43,7 @@ for language in languages:
                'homepage': 'https://pext.io/',
                'license': 'GPL-3.0+',
                'git_urls': ['https://github.com/Pext/pext_module_clipboard'],
+               'bugtracker': 'https://github.com/Pext/pext_module_clipboard',
+               'bugtracker_type': 'github',
                'platforms': ['Linux', 'Darwin', 'Windows']},
               metadata_file, indent=2, sort_keys=True)

@@ -1,4 +1,6 @@
 {
+  "bugtracker": "https://github.com/Pext/pext_module_clipboard",
+  "bugtracker_type": "github",
   "description": "Allows Pext to manage the clipboard",
   "developer": "Sylvia van Os",
   "git_urls": [

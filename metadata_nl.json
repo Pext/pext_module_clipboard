@@ -1,4 +1,6 @@
 {
+  "bugtracker": "https://github.com/Pext/pext_module_clipboard",
+  "bugtracker_type": "github",
   "description": "Stelt Pext in staat het klembord te beheren",
   "developer": "Sylvia van Os",
   "git_urls": [
