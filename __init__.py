@@ -68,18 +68,23 @@ class Module(ModuleBase):
                 pass
 
             self.entries.insert(0, content)
-            self.q.put([Action.replace_entry_list, self.entries])
+            self._update_entries()
             if self.settings['_api_version'] >= [0, 4, 0]:
                 self.q.put([Action.set_entry_context, content, [_("Edit"), _("Remove")]])
 
             self.tempignore = None
+
+    def _update_entries(self):
+        self.q.put([Action.replace_entry_list, self.entries])
+        if self.settings['_api_version'] >= [0, 5, 0]:
+            self.q.put([Action.replace_entry_info_dict, {entry: entry for entry in self.entries}])
 
     def stop(self):
         pass
 
     def selection_made(self, selection):
         if len(selection) == 0:
-            self.q.put([Action.replace_entry_list, self.entries])
+            self._update_entries()
         elif len(selection) == 1:
             if self.settings['_api_version'] >= [0, 4, 0]:
                 if selection[0]["context_option"] == _("Edit"):
@@ -94,7 +99,7 @@ class Module(ModuleBase):
                     except ValueError:
                         pass
 
-                    self.q.put([Action.replace_entry_list, self.entries])
+                    self._update_entries()
                     self.q.put([Action.set_selection, []])
                     return
 
@@ -106,7 +111,7 @@ class Module(ModuleBase):
             for i, entry in enumerate(self.entries):
                 if entry == identifier:
                     self.entries[i] = response
-                    self.q.put([Action.replace_entry_list, self.entries])
+                    self._update_entries()
                     if self.settings['_api_version'] >= [0, 4, 0]:
                         self.q.put([Action.set_entry_context, response, [_("Edit"), _("Remove")]])
                     self.q.put([Action.set_selection, []])
